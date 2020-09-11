@@ -77,7 +77,7 @@ class HabitCard extends Component {
         return { streak: prevState.streak + 1 };
       });
     } else {
-      this.setState({ streak: 0 });
+      this.setState({ streak: 1 });
     }
 
     window.location = "/session";
@@ -100,8 +100,8 @@ class HabitCard extends Component {
         </button>
         {/* <h3>Last Completed: {this.props.date}</h3> */}
         <Link to={`/session/details/${this.props.idx}`}>
-        <button className="moreInfoButton">
-          More Info
+          <button className="moreInfoButton">
+            More Info
         </button>
         </Link>
         <button onClick={this.handleSubmit} className="deleteButton">delete</button>
